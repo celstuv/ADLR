@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+@font-face {
+  font-family: "font-1";
+  src: url('./assets/Montserrat-BoldItalic.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid black; */
+}
+
+body {
+  font-family: 'Poppins', "sans-serif";
+  background: url('https://cdn.pixabay.com/photo/2014/06/11/15/47/texture-366832_960_720.jpg') no-repeat fixed center/cover;
+  color: #000000bf;
+}
+
+q {
+  font-size: 1.75rem;
+  font-family: "font-1";
+  text-align: center
+}
+
+q::before, {
+  content: "« ";
+}
+
+q::after {
+  content: " »";
+}
+
+span {
+  font-family: "font-1";
+  font-size: 15px;
+  color: #fff;
+}
+
+a {
+  color: #000000bf;
+  transition: 0.4s;
+  font-weight: 500px;
+}
+
+a:hover {
+  color: aqua;
+}
+
+header {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  padding: 10px;
+  margin: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.59);
+}
+
+h1::first-letter {
+  color: deepskyblue;
+  font-size: 5rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 1.55rem;
+  text-align: center;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.59);
+  margin: 10px;
+}
+
+main {
+  background: #ffffff6b;
+  width: 95%;
+  margin: 10px auto;
+  padding: 0 0 20px 0;
+  border-radius: 50px;
+  /* border: 1px solid black; */
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+aside,
+.container,
+.interlude,
+.gallery {
+  /* border-radius: 50px; */
+  padding: 10px;
+  margin: 20px;
+  /* border: 1px solid lightgrey; */
+}
+
+aside,
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  text-align: center;
+}
+
+/**** Navigation latérale ****/
+ul {
+  list-style: none;
+  width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.logo,
+.navigation,
+.network {
+  background: #FFFFFFC9;
+  margin: 20px;
+  width: 85%;
+  border-radius: 10px;
+}
+
+.logo {
+  background: url('https://cdn.pixabay.com/photo/2017/09/07/10/36/graffiti-2724511_960_720.jpg') no-repeat center/cover;
+  height: 150px;
+}
+
+.navigation li {
+  margin: 20px;
+}
+
+.network ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin: 20px;
+}
+
+ul img {
+  width: 40%;
+}
+
+/**** articles ****/
+.containerCarousselText,
+.interlude,
+.gallery {
+  background: transparent;
+  margin: 20px;
+  width: 95%;
+  border-radius: 10px;
+}
+
+.containerCarousselText {
+  background: url('assets/wall.jpg') no-repeat center/cover;
+  height: 700px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.textIntro {
+  background: #776a6a26;
+  border-radius: 10px;
+  margin: 50px;
+  width: 80%;
+  color: #fff;
+}
+
+.interlude {
+  text-align: center;
+}
+
+/*gallery*/
+.gallery {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.bloc {
+  border-radius: 10px;
+  width: 33.33%;
+  margin: 5px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/**** footer ****/
+footer {
+  background: #ffffff6b;
+  width: 95%;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 50px;
+  display:grid;
+  grid-template-columns: 30% 20% 50%;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    /*2 caractère pour nommé les colonnes*/
+    "i1 i2"
+    "ta ta"
+    "bt bt"
+}
+
+#firstname {
+  grid-area: i1;
+}
+
+#lastname {
+  grid-area: i2;
+}
+
+textarea {
+  grid-area: ta;
+}
+
+#submit {
+  grid-area: bt;
+}
+
+input,
+textarea {
+  margin: 5px;
+  height: 45px;
+  border: 1px solid darkblue;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  font-family: "font-1";
+  background-color: #FFFFFFC9;
+}
+
+input[type="email"]:focus-visible {
+  background-color: #b5d7ee;
+  border: none;
+}
+
+textarea {
+  grid-area: ta;
+  resize: none;
+}
+
+#submit {
+  cursor: pointer;
+}
+
+#submit:focus {
+  outline: none;
+}
+
+.copyright {
+  text-align: center;
+}
+
+
+@media screen and (max-width: 1000px) {
+  footer{
+    display: block;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  main {
+    width: 65%;
+  }
